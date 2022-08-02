@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>DRAMA BUTTON!!!</title>
+    	<meta name="description" content="Add some drama to your day, push the button!!!" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+		<link rel="author" href="https://laude.ml/"/>
+		<link rel="publisher" href="https://laude.ml/" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" /> 
+		<link rel="apple-touch-icon" href="img/icon-57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="img/icon-72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="img/icon-114.png" />
+		<link rel="shortcut icon" href="img/icon.ico">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@14ud3">
+        <meta name="twitter:creator" content="@14ud3">
+        <meta name="twitter:title" content="DRAMA BUTTON!!!">
+        <meta name="twitter:description" content="Add some drama to your day, push the button!!!">
+
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<h1>ADD SOME DRAMA TO YOUR DAY!</h1>
+		<div id="wrappone">
+			<div id="bottone">
+				<img id="bottonegiu" src="img/bottonegiu.jpg">
+				<img id="bottonesu" src="img/bottonesu.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<p>Turn up the volume! <img style="vertical-align:middle" width="24" height="24" src="img/speaker.svg"></p>
+		</div>
+		<audio id="player" onended="window.location.reload();">
+			<source src="mp3/killbill.ogg" type="audio/ogg" />
+			<source src="mp3/killbill.mp3" type="audio/mpeg" />
+			 Your browser does not support the audio element.
+		</audio>
+	  	<div id="footer">
+	  		<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flaude.ml%2Fdrama-button%2F&layout=button_count&size=large&mobile_iframe=true&appId=154546218054064&width=114&height=28" width="114" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-text="Add some drama to your day!" data-via="IgnasLaude" data-size="large" data-hashtags="drama,button,audio">Tweet</a>
+		</div>
+
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>	  
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var bottone = $("#bottone");
+			var bottonesu = $("#bottonesu");
+
+
+			$("#bottone").on('mouseup', function(){
+				bottonesu.show();
+			}).on('mousedown', function(){
+				bottonesu.hide();
+				var audio = document.getElementById('player');
+				audio.play();
+			});
+			// bottone.mouseup(function(){
+			// 	bottonesu.show();
+			// }).mousedown(function(){
+			// 	bottonesu.hide();
+			// 	var audio = document.getElementById('player');
+			// 	audio.play();
+			// });
+		});
+
+		</script>
+	</body>
+</html>
